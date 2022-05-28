@@ -1,0 +1,162 @@
+:root {
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-opacity: hsla(178, 100%, 50%, 0.5);
+    --main-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size-paragraph: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cyan {
+    color: var(--Cyan);
+}
+
+.mute {
+    color: var(--soft-blue);
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    background-color: var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.main-container {
+    width: 80%;
+    max-width: 22rem;
+}
+
+.nft-container {
+    background-color: var(--card-background);
+    padding: 32px;
+    border-radius: 16px;
+    color: var(--White);
+}
+
+.nft-images {
+    width: 100%;
+    max-width: 19rem;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.nft-main-image {
+    background-image: url(./images/image-equilibrium.jpg);
+    width: 100%;
+    height: 100%;
+    min-height: 19rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nft-secondary-image {
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    min-height: 19rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    display: none;
+}
+
+.nft-images:hover .nft-secondary-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(./images//icon-view.svg);
+    background-color: var(--Cyan-opacity);
+    background-position: 50% 50%;
+    background-size: 20% 20%;
+    transition: background-color 2s ease-in-out;
+}
+
+.content {
+    margin: 1rem 0;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+.nft-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--soft-blue);
+}
+
+.nft-bottom p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nft-footer {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.card__user {
+    height: 50px;
+    width: 50px;
+}
+
+.card__user img {
+    height: 100%;
+    width: 100%;
+}
+
+.nft-container:hover h2 {
+    color: var(--Cyan);
+}
+
+.nft-container:hover .mute span {
+    color: var(--Cyan);
+}
+
+.attribution {
+    color: var(--soft-blue);
+    text-align: center;
+    font-size: var(--Font-size-paragraph);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--Cyan);
+}
+
+@media screen and (max-width: 375px) {
+    .main-container {
+        font-size: 90%;
+    }
+    .nft-main-image {
+        min-height: 15rem;
+    }
+    .nft-secondary-image {
+        min-height: 15rem;
+    }
+}
