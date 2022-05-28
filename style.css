@@ -39,6 +39,9 @@ body {
 .main-container {
     width: 80%;
     max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .nft-container {
